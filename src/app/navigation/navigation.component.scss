@@ -1,0 +1,26 @@
+$nav-color-main: rgba(0, 0, 0, 0.1);
+$nav-color-ft: rgba(0, 0, 0, 0.75);
+$nav-color-button-ft: rgba(255, 255, 255, 0.9);
+$nav-color-button-grad: linear-gradient(315deg, #90d5ec 0%, #fc575e 74%);
+
+.nav {
+  display: flex;
+  background-color: $nav-color-main;
+  padding: .5rem 1rem;
+  justify-content: space-between; 
+  align-items: center;
+  height: 100%;
+
+  &__header {
+    font-size: 1.2rem;
+    color: $nav-color-ft;
+  }
+
+  &__button {
+    background-image: $nav-color-button-grad;
+    color: $nav-color-button-ft;
+    padding: .5rem 1.3rem;
+    border: 0;
+    border-radius: 5px;
+  }
+}

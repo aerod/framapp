@@ -1,0 +1,10 @@
+$categoryTree-color-bg: rgba(0, 0, 0, .17);
+$categoryTree-color-ft: rgba(0, 0, 0, 0.75);
+
+
+.categoryTree {
+  background-color: $categoryTree-color-bg;
+  color: $categoryTree-color-ft;
+  height: 100%;
+  padding: 1rem;
+}
