@@ -15,7 +15,6 @@ export class CategoryTreeComponent implements OnInit {
     db.object('/api/v1/categories').valueChanges().subscribe(
       categories => {
         this.categories = categories;
-        console.log('c', categories);
       }
     );
   }
