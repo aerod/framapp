@@ -3,8 +3,10 @@
 $categoryTree-color-ft: $color-primary-ft;
 
 .categoryTree {
-  height: 100%;
   padding: 1rem;
+  position: sticky;
+  top: 3rem;
+  height: auto;
   
   &__header {
     color: $categoryTree-color-ft;
