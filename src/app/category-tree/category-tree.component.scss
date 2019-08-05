@@ -1,6 +1,7 @@
 @import '../../general';
 
-$categoryTree-color-ft: $color-primary-ft;
+$categoryTree-color-ft: $color-primary-ft !default;
+$categoryTree-color-ft-active: $color-secondary-ft !default;
 
 .categoryTree {
   padding: 1rem;
@@ -24,5 +25,10 @@ $categoryTree-color-ft: $color-primary-ft;
     color: $categoryTree-color-ft;
     text-decoration: none;
     margin-bottom: 1rem;
+    transition: .2s all;
+
+    &--active {
+      color: $categoryTree-color-ft-active;
+    }
   }
 }
