@@ -1,0 +1,26 @@
+@import '../../general';
+
+$categoryTree-color-ft: $color-primary-ft;
+
+.categoryTree {
+  height: 100%;
+  padding: 1rem;
+  
+  &__header {
+    color: $categoryTree-color-ft;
+    font-size: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__category {
+    display: block;
+    cursor: pointer;
+    color: $categoryTree-color-ft;
+    text-decoration: none;
+    margin-bottom: 1rem;
+  }
+}
