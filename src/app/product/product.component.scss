@@ -1,12 +1,23 @@
+@import '../../general';
+
+$product-color-bg: rgba($color-primary, .5) !default;
+$product-line-height: 1.2rem;
+
 .product {
+  height: 100%;
+
   &__image {
     border-radius: 4px;
     width: 100%;
-    height: auto;
+    height: calc(100% - #{$product-line-height});
+    object-fit: cover;
+    background-color: $product-color-bg;
+    display: block;
   }
 
   &__title {
     font-size: 0.8rem;
     font-weight: 500;
+    line-height: $product-line-height;
   }
 }

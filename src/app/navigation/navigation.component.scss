@@ -1,9 +1,9 @@
 @import '../../general';
 
-$nav-color-bb: rgba($color-primary, 0.3);
-$nav-color-ft: $color-primary-ft;
-$nav-color-button-ft: rgba(255, 255, 255, 0.9);
-$nav-color-button-grad: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+$nav-color-bb: rgba($color-primary, 0.3) !default;
+$nav-color-ft: $color-primary-ft !default;
+$nav-color-button-ft: rgba(255, 255, 255, 0.9) !default;
+$nav-color-button-grad: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%) !default;
 
 .nav {
   display: flex;
