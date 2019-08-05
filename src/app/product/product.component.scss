@@ -1,0 +1,12 @@
+.product {
+  &__image {
+    border-radius: 4px;
+    width: 100%;
+    height: auto;
+  }
+
+  &__title {
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+}

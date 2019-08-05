@@ -8,12 +8,18 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { CategoryTreeComponent } from './category-tree/category-tree.component';
 import { environment } from 'src/environments/environment';
+import { ProductComponent } from './product/product.component';
+import { ProductsListComponent } from './products-list/products-list.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    CategoryTreeComponent
+    CategoryTreeComponent,
+    ProductComponent,
+    ProductsListComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

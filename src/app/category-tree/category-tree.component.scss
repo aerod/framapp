@@ -1,10 +1,26 @@
-$categoryTree-color-bg: rgba(0, 0, 0, .17);
-$categoryTree-color-ft: rgba(0, 0, 0, 0.75);
+@import '../../general';
 
+$categoryTree-color-ft: $color-primary-ft;
 
 .categoryTree {
-  background-color: $categoryTree-color-bg;
-  color: $categoryTree-color-ft;
   height: 100%;
   padding: 1rem;
+  
+  &__header {
+    color: $categoryTree-color-ft;
+    font-size: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__category {
+    display: block;
+    cursor: pointer;
+    color: $categoryTree-color-ft;
+    text-decoration: none;
+    margin-bottom: 1rem;
+  }
 }

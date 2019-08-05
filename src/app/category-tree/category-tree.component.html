@@ -1,4 +1,10 @@
 <section class="categoryTree">
   <h2 class="categoryTree__header">Categories</h2>
-  <ul></ul>
+  <ul class="categoryTree__list">
+      <li *ngFor="let category of categories | keyvalue">
+        <a class="categoryTree__category">
+          {{category.value.title}}
+        </a>
+      </li>
+  </ul>
 </section>

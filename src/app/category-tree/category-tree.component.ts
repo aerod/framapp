@@ -7,12 +7,12 @@ import { AngularFireDatabase } from 'angularfire2/database';
   styleUrls: ['./category-tree.component.scss']
 })
 export class CategoryTreeComponent implements OnInit {
-  categories: any[];
+  categories: {};
 
   constructor(
     db: AngularFireDatabase
   ) {
-    db.list('/api/v1/categories').valueChanges().subscribe(
+    db.object('/api/v1/categories').valueChanges().subscribe(
       categories => {
         this.categories = categories;
         console.log('c', categories);
