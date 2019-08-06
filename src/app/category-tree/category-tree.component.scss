@@ -4,7 +4,7 @@ $categoryTree-color-ft: $color-primary-ft !default;
 $categoryTree-color-ft-active: $color-secondary-ft !default;
 
 .categoryTree {
-  padding: 1rem;
+  padding: 1rem 1rem 0;
   position: sticky;
   top: 3rem;
   height: auto;
