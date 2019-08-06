@@ -1,11 +1,15 @@
+@import '../general';
+
 .container {
   display: grid;
   height: 100%;
-  grid-template-areas: "top top" "sidebar main";
-  grid-template-columns: 300px auto;
+  grid-template-areas: "top top" "sidebar sidebar" "main main";
+  grid-template-columns: 200px auto;
   grid-template-rows: 3rem auto;
   grid-column-gap: 1rem;
   grid-row-gap: 0;
+  max-width: 900px;
+  margin: 0 auto;
 
   &__top {
     grid-area: top;
@@ -18,4 +22,10 @@
   &__main {
     grid-area: main;
   }
+}
+
+@media (min-width: $small) {
+  .container {
+    grid-template-areas: "top top" "sidebar main";
+  }  
 }

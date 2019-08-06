@@ -1,10 +1,15 @@
-<li class="product">
-  <img 
-    class="product__image"
-    src="{{product.imageUrl}}"
-    alt="{{product.title}}"
-    loading="lazy"
-  >
+<li
+  class="product"
+  routerLink="/product/{{product.id}}"
+>
+  <figure class="product__image">
+    <img 
+      class="image"
+      src="{{product.imageUrl}}"
+      alt="{{product.title}}"
+      loading="lazy"
+    >
+  </figure>
   <h2 class="product__title">
     {{product.title}}
   </h2>

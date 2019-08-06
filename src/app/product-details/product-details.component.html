@@ -1,1 +1,19 @@
-<p>product-details works!</p>
+<section
+  class="productDetails"
+  *ngIf="product"
+>
+  <div class="productDetails__text">
+    <h2 class="productDetails__headline">{{product.title}}</h2>
+    <h3 class="productDetails__category">
+      {{product.category}}
+      <span class="productDetails__price">{{product.price | price }}</span>
+    </h3>
+    <p class="productDetails__description">{{product.description}}</p>
+  </div>
+  <div class="productDetails__wrapper">
+    <div
+      [ngStyle]="{ 'background-image': 'url(' + product.imageUrl + ')'}"
+      class="productDetails__image"
+    ></div>
+  </div>
+</section>

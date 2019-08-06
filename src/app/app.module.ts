@@ -11,6 +11,7 @@ import { environment } from 'src/environments/environment';
 import { ProductComponent } from './product/product.component';
 import { ProductsListComponent } from './products-list/products-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { PricePipe } from './price.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     CategoryTreeComponent,
     ProductComponent,
     ProductsListComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    PricePipe
   ],
   imports: [
     BrowserModule,

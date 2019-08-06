@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-details',
@@ -6,10 +8,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-details.component.scss']
 })
 export class ProductDetailsComponent implements OnInit {
+  product: {};
+  id: number;
+  private sub: any;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(
+    private db: AngularFireDatabase,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
   }
 
+  ngOnInit() {
+    
+    this.sub = this.route.params.subscribe(params => {
+      this.id = params['id'];
+      this.id && this.db.object(`/api/v1/products/${this.id}`).valueChanges().subscribe(
+        product => {
+          this.product = product;
+        }
+      );
+    })
+
+  }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
+  }
 }

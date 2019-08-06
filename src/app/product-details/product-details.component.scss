@@ -1,0 +1,96 @@
+@import '../../general';
+
+$productDetails-color-bg: $color-primary;
+$productDetails-color-ft: $color-primary-ft;
+$productDetails-color-special-ft: $color-secondary-ft;
+
+@keyframes wobble-1 {
+  50% {
+    border-radius: 39% 61% 36% 64% / 78% 27% 73% 22%;
+  }
+  100% {
+    border-radius: 83% 17% 62% 38% / 65% 27% 73% 35%;
+  }
+}
+
+@keyframes wobble-2 {
+  50% {
+    border-radius: 30% 84% 30% 86% / 55% 30% 89% 45%;
+  }
+  100% {
+    border-radius: 57% 43% 39% 61% / 36% 44% 56% 64%;
+  }
+}
+
+@mixin blob {
+  width: 100%;
+  max-width: 320px;
+  height: 100%;
+  max-height: 180px;
+  background-size: cover;
+  position: absolute;
+}
+
+.productDetails {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 0 1rem;
+
+  &__text {
+    color: $productDetails-color-ft;
+    padding-right: 1rem;
+  }
+
+  &__headline {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    padding-bottom: .5rem;
+  }
+
+  &__category {
+    padding-bottom: .5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: $productDetails-color-special-ft;
+  }
+
+  &__price {
+    float: right;
+  }
+
+  &__description {
+    line-height: 1.4;
+  }
+
+  &__wrapper {
+    min-width: 250px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    &::before {
+      @include blob;
+      content: '';
+      background-image: linear-gradient(315deg, #9fa4c4 0%, #9e768f 74%);
+      display: block;
+      animation: wobble-2 8s ease-in-out alternate-reverse infinite;
+      border-radius: 85% 15% 76% 24% / 82% 15% 85% 18%;
+    }
+  }
+
+  &__image {
+    @include blob;
+    background-color: $productDetails-color-bg;
+    animation: wobble-1 10s ease-in-out alternate infinite;
+    border-radius: 81% 19% 35% 65% / 35% 16% 84% 65%;
+
+  }
+}
+
+@media (min-width: $small) {
+  .productDetails {
+    padding: 1rem 0 0;
+  }
+
+}
