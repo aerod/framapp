@@ -27,7 +27,6 @@ export class ProductDetailsComponent implements OnInit {
       this.id && this.db.object(`/api/v1/products/${this.id}`).valueChanges().subscribe(
         product => {
           this.product = product;
-          console.log('the little product', this.product);
         }
       );
     })
